@@ -47,5 +47,7 @@ namespace MicroServices.Shared.Dtos
         }
     }
 
-    public class NoContent{}
+    public class NoContent
+    {
+    }
 }

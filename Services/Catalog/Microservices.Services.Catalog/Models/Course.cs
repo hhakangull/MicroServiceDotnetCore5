@@ -21,7 +21,7 @@ namespace Microservices.Services.Catalog.Models
         public string? Picture { get; set; }
 
         [BsonRepresentation(BsonType.DateTime)]
-        public DateTime CreatedTime { get; set; } = DateTime.Now.Date;
+        public DateTime CreatedTime { get; set; }
 
         public Feature Feature { get; set; } 
 
