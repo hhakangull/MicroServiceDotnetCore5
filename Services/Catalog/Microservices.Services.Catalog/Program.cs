@@ -10,6 +10,7 @@ var services = builder.Services;
 var configuration = builder.Configuration;
 
 services.AddScoped<ICategoryService, CategoryService>();
+services.AddScoped<ICourseService, CourseService>();
 
 services.AddControllers();
 services.AddEndpointsApiExplorer();

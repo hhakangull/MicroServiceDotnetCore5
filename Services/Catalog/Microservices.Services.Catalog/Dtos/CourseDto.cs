@@ -23,6 +23,8 @@ internal class CourseDto
 
 internal class CourseCreateDto
 {
+    public string Id { get; set; }
+
     public string Name { get; set; }
 
     public string UserId { get; set; }
@@ -37,6 +39,8 @@ internal class CourseCreateDto
 
 internal class CourseUpdateDto
 {
+    public string Id { get; set; }
+
     public string Name { get; set; }
 
     public string UserId { get; set; }
