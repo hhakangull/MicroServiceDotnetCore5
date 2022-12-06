@@ -1,13 +1,20 @@
+using MicroServices.Services.Catalog.Settings;
+using Microsoft.Extensions.Options;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 var services = builder.Services;
+var configuration = builder.Configuration;
 
 services.AddControllers();
 services.AddEndpointsApiExplorer();
 services.AddSwaggerGen();
 services.AddAutoMapper(typeof(Program));
+services.Configure<DatabaseSettings>(configuration.GetSection("DataBaseSettings"));
+services.AddSingleton<IDatabaseSettings>(sp => sp.GetRequiredService<IOptions<DatabaseSettings>>().Value);
+
 
 var app = builder.Build();
 
