@@ -1,3 +1,4 @@
+using MicroServices.Services.Catalog.Services;
 using MicroServices.Services.Catalog.Settings;
 using Microsoft.Extensions.Options;
 
@@ -7,6 +8,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 var services = builder.Services;
 var configuration = builder.Configuration;
+
+services.AddScoped<ICategoryService, CategoryService>();
 
 services.AddControllers();
 services.AddEndpointsApiExplorer();
