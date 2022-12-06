@@ -1,6 +1,6 @@
 ﻿namespace MicroServices.Services.Catalog.Dtos;
 
-public class CourseDto
+internal class CourseDto
 {
     public string Id { get; set; }
 
@@ -21,7 +21,7 @@ public class CourseDto
     public CategoryDto Category { get; set; }
 }
 
-public class CourseCreateDto
+internal class CourseCreateDto
 {
     public string Name { get; set; }
 
@@ -35,7 +35,7 @@ public class CourseCreateDto
     public string CategoryId { get; set; }
 }
 
-public class CourseUpdateDto
+internal class CourseUpdateDto
 {
     public string Name { get; set; }
 
