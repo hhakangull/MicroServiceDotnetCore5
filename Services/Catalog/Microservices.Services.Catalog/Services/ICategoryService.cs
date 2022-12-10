@@ -3,7 +3,7 @@ using MicroServices.Shared.Dtos;
 
 namespace MicroServices.Services.Catalog.Services
 {
-    internal interface ICategoryService
+    public interface ICategoryService
     {
         Task<Response<List<CategoryDto>>> GetAllAsync();
         Task<Response<CategoryDto>> CreateAsync(CategoryDto category);
