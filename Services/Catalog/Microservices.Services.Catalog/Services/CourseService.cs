@@ -50,7 +50,7 @@ namespace MicroServices.Services.Catalog.Services
         public async Task<Response<CourseDto>> GetByIdAsync(string id)
         {
             var course = await _courseCollection.Find<Course>(x => x.Id == id).FirstOrDefaultAsync();
-            var course2 = await _courseCollection.Find<Course>(id).FirstOrDefaultAsync();
+            
             if (course is null)
             {
                 return Response<CourseDto>.Fail("Course not found", 404);

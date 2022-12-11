@@ -13,12 +13,14 @@ services.AddScoped<ICategoryService, CategoryService>();
 services.AddScoped<ICourseService, CourseService>();
 
 services.AddControllers();
-services.AddEndpointsApiExplorer();
-services.AddSwaggerGen();
-services.AddAutoMapper(typeof(Program));
+
 services.Configure<DatabaseSettings>(configuration.GetSection("DataBaseSettings"));
+
+//services.AddEndpointsApiExplorer();
+services.AddAutoMapper(typeof(Program));
 services.AddSingleton<IDatabaseSettings>(sp => sp.GetRequiredService<IOptions<DatabaseSettings>>().Value);
 
+services.AddSwaggerGen();
 
 var app = builder.Build();
 

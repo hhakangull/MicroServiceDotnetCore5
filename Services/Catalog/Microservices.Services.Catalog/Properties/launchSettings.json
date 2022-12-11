@@ -11,13 +11,12 @@
   "profiles": {
     "Service.Catalog": {
       "commandName": "Project",
-      "launchBrowser": false,
+      "launchBrowser": true,
       "launchUrl": "swagger",
+      "applicationUrl": "http://localhost:5011",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
-      },
-      "dotnetRunMessages": true,
-      "applicationUrl": "http://localhost:5011"
+      }
     },
     "IIS Express": {
       "commandName": "IISExpress",
@@ -27,6 +26,5 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     }
-
   }
 }
